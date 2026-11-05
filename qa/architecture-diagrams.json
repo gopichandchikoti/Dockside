@@ -1,0 +1,14 @@
+{
+  "parser": "Mermaid",
+  "scope": "Syntax validation; no browser rendering claimed",
+  "files": [
+    {
+      "file": "README.md",
+      "diagramsParsed": 1
+    },
+    {
+      "file": "ARCHITECTURE.md",
+      "diagramsParsed": 20
+    }
+  ]
+}

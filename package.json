@@ -1,0 +1,51 @@
+{
+  "name": "dockside",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dockside \u2014 a self-hosted monitoring and control dashboard for personal Linux servers.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "dev:api": "tsx watch --env-file-if-exists=.env apps/api/src/main.ts",
+    "dev:web": "npm run dev -w @dockside/web",
+    "sample": "node scripts/sample-stack.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json && npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:coverage": "npm run test:coverage --workspaces --if-present",
+    "build": "npm run build -w @dockside/web && npm run build -w @dockside/api",
+    "start": "node --env-file-if-exists=.env apps/api/dist/server.mjs",
+    "e2e": "playwright test",
+    "verify": "npm run format:check && npm run lint && npm run typecheck && npm run test:coverage && npm run build",
+    "release": "node scripts/package-release.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.13.0",
+    "@vitest/coverage-v8": "4.1.12",
+    "axe-core": "^4.10.0",
+    "eslint": "^9.39.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-sonarjs": "^3.0.0",
+    "globals": "^16.0.0",
+    "js-yaml": "^4.3.2",
+    "prettier": "^3.6.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "4.1.12"
+  },
+  "overrides": {
+    "glob": "14.0.2",
+    "minimatch": "11.0.1"
+  }
+}

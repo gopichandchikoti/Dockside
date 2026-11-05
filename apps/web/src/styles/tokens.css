@@ -1,0 +1,139 @@
+/*
+ * Dockside design tokens.
+ * Identity: a working harbour office — warm "fog" paper by day, deep harbour ink by night; a tide-blue interactive
+ * colour, a buoy-orange brand accent, and status colours that are never the only cue (every status also has a glyph).
+ * Contrast pairs below were checked against WCAG 2.2 AA (see docs/DESIGN.md).
+ */
+@import '@fontsource-variable/instrument-sans/index.css';
+@import '@fontsource-variable/jetbrains-mono/index.css';
+
+:root {
+  --font-ui: 'Instrument Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-md: 0.9375rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.5rem;
+  --s6: 2rem;
+  --s7: 3rem;
+
+  --r1: 6px;
+  --r2: 10px;
+  --tap: 2.75rem;
+  --rail-w: 15rem;
+  --content-max: 82rem;
+
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+
+  /* light — "day shift" */
+  --bg: #f3f0e8;
+  --surface: #fbfaf6;
+  --surface-2: #ebe7da;
+  --line: #d6d0be;
+  --line-strong: #b9b29c;
+  --text: #17222b;
+  --text-2: #4a5863;
+  --accent: #0b5fa5;
+  --accent-contrast: #ffffff;
+  --accent-soft: #dbe9f6;
+  --brand: #d4561b;
+  --ok: #0c6e56;
+  --ok-soft: #d6efe6;
+  --warn: #8a5a00;
+  --warn-soft: #f6e6bd;
+  --crit: #b0213a;
+  --crit-soft: #f7d9de;
+  --info: #1a5f9e;
+  --info-soft: #dbe9f6;
+  --idle: #5b6770;
+  --idle-soft: #e1ded2;
+  --focus: #0b5fa5;
+  --shadow: 0 1px 2px rgb(23 34 43 / 8%), 0 8px 24px rgb(23 34 43 / 8%);
+
+  --chart-1: #0b5fa5;
+  --chart-2: #c2410c;
+  --chart-3: #0c6e56;
+  --chart-4: #7c3aed;
+  --chart-grid: #d6d0be;
+  --chart-gap: #b0213a;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0c1318;
+    --surface: #121c23;
+    --surface-2: #19252e;
+    --line: #26343f;
+    --line-strong: #3a4c5a;
+    --text: #e8eef2;
+    --text-2: #9db0be;
+    --accent: #6cb8f5;
+    --accent-contrast: #06131d;
+    --accent-soft: #14304a;
+    --brand: #ff8a4c;
+    --ok: #45d3a8;
+    --ok-soft: #12362d;
+    --warn: #f0bd4a;
+    --warn-soft: #3b2f10;
+    --crit: #ff7285;
+    --crit-soft: #3d1821;
+    --info: #6cb8f5;
+    --info-soft: #14304a;
+    --idle: #8ea0ad;
+    --idle-soft: #1f2d37;
+    --focus: #8cc8ff;
+    --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 12px 32px rgb(0 0 0 / 35%);
+    --chart-1: #6cb8f5;
+    --chart-2: #ff9a62;
+    --chart-3: #45d3a8;
+    --chart-4: #b79cff;
+    --chart-grid: #26343f;
+    --chart-gap: #ff7285;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0c1318;
+  --surface: #121c23;
+  --surface-2: #19252e;
+  --line: #26343f;
+  --line-strong: #3a4c5a;
+  --text: #e8eef2;
+  --text-2: #9db0be;
+  --accent: #6cb8f5;
+  --accent-contrast: #06131d;
+  --accent-soft: #14304a;
+  --brand: #ff8a4c;
+  --ok: #45d3a8;
+  --ok-soft: #12362d;
+  --warn: #f0bd4a;
+  --warn-soft: #3b2f10;
+  --crit: #ff7285;
+  --crit-soft: #3d1821;
+  --info: #6cb8f5;
+  --info-soft: #14304a;
+  --idle: #8ea0ad;
+  --idle-soft: #1f2d37;
+  --focus: #8cc8ff;
+  --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 12px 32px rgb(0 0 0 / 35%);
+  --chart-1: #6cb8f5;
+  --chart-2: #ff9a62;
+  --chart-3: #45d3a8;
+  --chart-4: #b79cff;
+  --chart-grid: #26343f;
+  --chart-gap: #ff7285;
+  color-scheme: dark;
+}

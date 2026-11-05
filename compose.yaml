@@ -1,0 +1,80 @@
+name: dockside
+services:
+  api:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_PATH: /data/dockside.sqlite
+      WEB_DIST: /app/web
+      BOOTSTRAP_HOST_NAME: Local Linux host
+      BOOTSTRAP_HOST_URL: http://host.docker.internal:9100/metrics
+      DOCKER_ENDPOINT: http://docker-proxy:2375
+    ports:
+      - '127.0.0.1:8080:8080'
+    volumes:
+      - dockside-data:/data
+    networks: [default, engine]
+    extra_hosts: ['host.docker.internal:host-gateway']
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test:
+        [
+          CMD,
+          node,
+          -e,
+          "fetch('http://127.0.0.1:8080/readyz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  node-exporter:
+    image: prom/node-exporter:v1.9.1
+    restart: unless-stopped
+    pid: host
+    network_mode: host
+    command:
+      - '--path.rootfs=/host'
+      - '--web.listen-address=${NODE_EXPORTER_BIND_ADDRESS:-172.17.0.1}:9100'
+      - '--collector.filesystem.mount-points-exclude=^/(dev|proc|sys|run|var/lib/docker)($$|/)'
+    volumes:
+      - '/:/host:ro,rslave'
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+  docker-proxy:
+    image: haproxy:3.0-alpine
+    restart: unless-stopped
+    user: '65534:65534'
+    group_add: ['${DOCKER_GID:-0}']
+    environment:
+      ALLOW_RESTART: '${DOCKER_PROXY_ALLOW_RESTART:-0}'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./deploy/docker-proxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    networks: [engine]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+  caddy:
+    image: caddy:2.10-alpine
+    profiles: [tls]
+    restart: unless-stopped
+    environment:
+      DOCKSIDE_DOMAIN: '${DOCKSIDE_DOMAIN:-localhost}'
+    ports: ['80:80', '443:443']
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [api]
+networks:
+  engine:
+    internal: true
+volumes:
+  dockside-data:
+  caddy-data:
+  caddy-config:

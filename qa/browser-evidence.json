@@ -1,0 +1,199 @@
+{
+  "accessibility": [
+    {
+      "screen": "overview",
+      "theme": "light",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "overview",
+      "theme": "light",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "host",
+      "theme": "light",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "host",
+      "theme": "light",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "containers",
+      "theme": "light",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "containers",
+      "theme": "light",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "checks",
+      "theme": "light",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "checks",
+      "theme": "light",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "alerts",
+      "theme": "light",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "alerts",
+      "theme": "light",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "settings",
+      "theme": "light",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "settings",
+      "theme": "light",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "overview",
+      "theme": "dark",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "overview",
+      "theme": "dark",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "host",
+      "theme": "dark",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "host",
+      "theme": "dark",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "containers",
+      "theme": "dark",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "containers",
+      "theme": "dark",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "checks",
+      "theme": "dark",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "checks",
+      "theme": "dark",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "alerts",
+      "theme": "dark",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "alerts",
+      "theme": "dark",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "settings",
+      "theme": "dark",
+      "width": 1440,
+      "browserName": "chromium",
+      "violations": []
+    },
+    {
+      "screen": "settings",
+      "theme": "dark",
+      "width": 320,
+      "browserName": "chromium",
+      "violations": []
+    }
+  ],
+  "performance": {
+    "domContentLoadedMs": 29.099999994039536,
+    "loadMs": 30.399999991059303,
+    "transferBytes": 1102,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
+  },
+  "consoleErrors": [],
+  "fontPolicyBlocks": [
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked.",
+    "Loading the font 'data:font/woff2;base64,[omitted]' violates the following Content Security Policy directive: \"font-src 'self'\". The action has been blocked."
+  ]
+}

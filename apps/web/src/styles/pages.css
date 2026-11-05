@@ -1,0 +1,73 @@
+.kv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  margin: 0;
+  border-block: 1px solid var(--line);
+}
+
+.kv > div {
+  padding: var(--s3) var(--s4);
+  border-inline-end: 1px solid var(--line);
+}
+
+.kv > div:last-child {
+  border-inline-end: 0;
+}
+
+.kv dt {
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.kv dd {
+  margin: 0;
+  font-weight: 600;
+}
+.form-band {
+  border-block: 1px solid var(--line);
+  padding-block: var(--s4);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--s3);
+}
+.log-view {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: var(--s4);
+  overflow: auto;
+  max-height: 30rem;
+  font-size: var(--fs-xs);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+dialog.dialog {
+  display: none;
+  color: var(--text);
+  max-height: 90dvh;
+  overflow-y: auto;
+}
+dialog.dialog[open] {
+  display: flex;
+}
+dialog::backdrop {
+  background: rgb(8 14 19 / 62%);
+}
+.narrow-form {
+  max-width: 30rem;
+}
+@media (max-width: 760px) {
+  .mobile-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s2);
+  }
+}
+summary {
+  min-height: var(--tap);
+  cursor: pointer;
+  padding-block: var(--s3);
+}

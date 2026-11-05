@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "proxyHasNoPublishedPorts": true,
+    "proxyNetworkIsInternal": true,
+    "proxyIsOnlySocketMount": true,
+    "socketMountIsReadOnly": true,
+    "apiBindsLoopback": true,
+    "exporterUsesHostNamespaces": true,
+    "exporterRootIsReadOnly": true
+  },
+  "scope": "YAML structure only; Docker not run"
+}

@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "archive": "release/dockside-1.0.0-2026-11-05T07-58-06-093Z.tar.gz",
+  "sha256": "8df32f5ce59690727b397eab4bb49acc0878b5c2f5a365d81070d25badc77ce4",
+  "verifiedFiles": 115,
+  "sourceFilesMatched": 114,
+  "health": "ready",
+  "ui": "served",
+  "assets": 2,
+  "unauthenticatedHosts": 401,
+  "bootstrap": "created secrets and preserved them on repeat",
+  "setup": "administrator created",
+  "csrf": "missing token rejected with 403",
+  "check": "created and ran successfully",
+  "logout": "session revoked",
+  "restart": "account, check and history persisted; login succeeded",
+  "node": "v22.13.1",
+  "platform": "win32",
+  "checkedAt": "2026-11-05T07:58:07.781Z"
+}
